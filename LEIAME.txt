@@ -1,0 +1,20 @@
+ +----------------------------------------------------------------------+
+ | Demo:                                                                |
+ |         Reservas de Sala   = http://andersusilva.com/sala            |
+ |             Usuario        = 999995                                  |
+ |             Senha          = 123456                                  |
+ |         Pag. administracao = http://andersusilva.com/sas/adm.php     |
+ |             Obs: ainda nao disponivel para demo.		        |
+ |             Usuario        = admin                                   |
+ |             Senha          = abc123                                  |
+ |                                                                      |
+ +----------------------------------------------------------------------+
+ | Arquivo de configuração: conf.inc.php                                |
+ | Estrutura do BD: sas.sql                                             |
+ | Bugs, traduções ou problemas, escreva para: igtoth@netsite.com.br    |
+ |                                                                      |
+ | Configuration file: conf.inc.php                                     |
+ | DB structure: sala.sql                                               |
+ | Bugs, traduções ou erros. Favor entrar em contato com: 	        |
+ | suporte@andersusilva.com                                             |
+ +----------------------------------------------------------------------+

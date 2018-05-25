@@ -1,0 +1,17 @@
+[20-May-2018 23:01:33 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/controller/include/config.php on line 7
+[21-May-2018 12:43:36 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/controller/include/config.php on line 7
+[21-May-2018 12:43:56 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/controller/include/config.php on line 7
+[21-May-2018 15:11:25 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/controller/include/config.php on line 7
+[21-May-2018 15:11:42 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/controller/include/config.php on line 7
+[21-May-2018 15:12:52 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/controller/include/config.php on line 7
+[21-May-2018 15:13:31 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/controller/include/config.php on line 7
+[21-May-2018 15:43:07 America/Sao_Paulo] PHP Warning:  require_once(PATH_WEBIN/cabecalho.php): failed to open stream: No such file or directory in /home/developf/public_html/salas/home.php on line 4
+[21-May-2018 15:43:07 America/Sao_Paulo] PHP Fatal error:  require_once(): Failed opening required 'PATH_WEBIN/cabecalho.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/developf/public_html/salas/home.php on line 4
+[21-May-2018 15:43:25 America/Sao_Paulo] PHP Warning:  require_once(/cabecalho.php): failed to open stream: No such file or directory in /home/developf/public_html/salas/home.php on line 4
+[21-May-2018 15:43:25 America/Sao_Paulo] PHP Fatal error:  require_once(): Failed opening required '/cabecalho.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/developf/public_html/salas/home.php on line 4
+[21-May-2018 15:43:28 America/Sao_Paulo] PHP Warning:  require_once(/cabecalho.php): failed to open stream: No such file or directory in /home/developf/public_html/salas/home.php on line 4
+[21-May-2018 15:43:28 America/Sao_Paulo] PHP Fatal error:  require_once(): Failed opening required '/cabecalho.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/developf/public_html/salas/home.php on line 4
+[21-May-2018 15:57:31 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected end of file in /home/developf/public_html/salas/home.php on line 45
+[21-May-2018 15:57:34 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected end of file in /home/developf/public_html/salas/home.php on line 45
+[21-May-2018 16:00:01 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'elseif' (T_ELSEIF) in /home/developf/public_html/salas/home.php on line 22
+[21-May-2018 16:04:03 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'elseif' (T_ELSEIF) in /home/developf/public_html/salas/home.php on line 22

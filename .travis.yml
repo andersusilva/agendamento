@@ -1,18 +1,5 @@
 language: php
 
-env:
-  global:
-    - setup=stable
-
-matrix:
-  fast_finish: true
-
-sudo: false
-
-cache:
-  directories:
-    - $HOME/view/cache
-
 notifications:
   email: false
 

@@ -1,8 +1,8 @@
 <?php
 	$host = "localhost";
-	$user = "developf_sala";
-	$pass = "j]8T2fkC?h6h";
-	$base = "developf_agendamento";
+	$user = "root";
+	$pass = "krow24";
+	$base = "agendamento";
 	
 	$conn = new mysqli($host, $user, $pass, $base);
 	

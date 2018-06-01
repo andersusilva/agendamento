@@ -143,9 +143,7 @@ $resultado_events = mysqli_query($conn, $result_events);
 							</dl>
 							<button class="btn btn-canc-vis btn-warning">Editar</button>
                             <!--ainda em construção - opção 1-->
-                            <button class="btn data-confirm btn-danger">Apagar</button>
-                            <!--ainda em construção - opção 2-->
-                            <a href='proc_apagar_usuario.php?id=".$resultado_events['id']."' data-confirm='Tem certeza de que deseja excluir o item selecionado?'>Apagar</a>
+                            <button class="btn btn-data-confirm btn-danger">Apagar</button>
 						</div>
 						<div class="form">
 							<form class="form-horizontal" method="POST" action="proc_edit_evento.php">
@@ -266,14 +264,9 @@ $resultado_events = mysqli_query($conn, $result_events);
 				$('.visualizar').slideToggle();
 				$('.form').slideToggle();
 			});
-			//ainda em construção - opção 1
-            $('.btn-data-confirm').on("click", function() {
-                $('.visualizar').slideToggle();
-                $('.form').slideToggle();
-            });
-            //ainda em construção - opção 2
+            //ainda em construção - opção 1
             $(document).ready(function(){
-                $('a[data-confirm]').click(function(ev){
+                $('.btn-data-confirm').click(function(ev){
                     var href = $(this).attr('href');
                     if(!$('#confirm-delete').length){
                         $('body').append('<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header bg-danger text-white">EXCLUIR ITEM<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body">Tem certeza de que deseja excluir o item selecionado?</div><div class="modal-footer"><button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button><a class="btn btn-danger text-white" id="dataComfirmOK">Apagar</a></div></div></div></div>');

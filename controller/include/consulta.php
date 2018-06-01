@@ -1,41 +1,27 @@
- <?
+ <?php
 
-include 'conecta.php';  
+include 'conecta.php';
 
 $Obj_Conexao = new conn();
 
-$pega_dados = $Obj_Conexao->Consulta("select * from professor");
+$pega_dados = $Obj_Conexao->Consulta('select * from professor');
 
 $retorno = mysql_num_rows($id);
 
-  if($retorno == 0 )
+  if ($retorno == 0) {
+      echo '<center>Erro ao carregar as informações !!</center>';
 
-  {
+      return 0;
+  } else {
+      for ($i = 0; $i < $retorno; $i++) {
+          $linha = mysql_fetch_array($pega_dados);
 
-          print("<center>Erro ao carregar as informações !!</center>");
+          $id = $linha[1];
 
-          return 0;
+          $nome = $linha[1];
 
-  }
-
-  else
-
-  {
-
-for ($i = 0; $i < $retorno; ++$i)
-
-          {
-
-                  $linha = mysql_fetch_array($pega_dados);
-
-                  $id = $linha[1];
-
-                  $nome = $linha[1];
-
-                  print("$id - $nome");
-
-          }
-
+          echo "$id - $nome";
+      }
   }
 
 $Obj_Conexao->Consulta;

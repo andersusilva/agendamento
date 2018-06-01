@@ -3,22 +3,22 @@
 	<div class="form-group">
 		<label>Selecione o Nome do Professor:</label>
 		<?php
-			$sql = "SELECT * FROM professor";
-			
-			$result = $conn->query($sql);
-			
-			$qtd = $result->num_rows;
-			
-			if($qtd > 0){
-				print "<select name='nome_professor' class='form-control'>";
-				while( $row = $result->fetch_assoc() ){
-					print "<option value='".$row["id_professor"]."'>".$row["nome_professor"]."</option>";
-				}
-				print "</select>";
-			}else{
-				print "Não encontrou resultados";
-			}
-		?>
+            $sql = 'SELECT * FROM professor';
+
+            $result = $conn->query($sql);
+
+            $qtd = $result->num_rows;
+
+            if ($qtd > 0) {
+                echo "<select name='nome_professor' class='form-control'>";
+                while ($row = $result->fetch_assoc()) {
+                    echo "<option value='".$row['id_professor']."'>".$row['nome_professor'].'</option>';
+                }
+                echo '</select>';
+            } else {
+                echo 'Não encontrou resultados';
+            }
+        ?>
 	</div>
 	
 	<div class="form-group">

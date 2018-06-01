@@ -1,3 +1,3 @@
 <?php
-header("Location: https://developforweb.com.br/agendamento");
-?>
+
+header('Location: https://developforweb.com.br/agendamento');

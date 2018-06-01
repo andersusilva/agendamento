@@ -192,35 +192,35 @@ session_start();
                                             <div class="col-lg-12">
                                                 <?php
 
-                                                include("controller/include/config.php");
+                                                include 'controller/include/config.php';
 
-                                                switch(@$_REQUEST["page"]){
-                                                    case "cad-professor":
-                                                        include("controller/cadastrar-professor.php");
+                                                switch (@$_REQUEST['page']) {
+                                                    case 'cad-professor':
+                                                        include 'controller/cadastrar-professor.php';
                                                         break;
-                                                    case "list-professor":
-                                                        include("controller/listar-professor.php");
+                                                    case 'list-professor':
+                                                        include 'controller/listar-professor.php';
                                                         break;
-                                                    case "salvar-professor":
-                                                        include("controller/salvar-professor.php");
+                                                    case 'salvar-professor':
+                                                        include 'controller/salvar-professor.php';
                                                         break;
-                                                    case "editar-professor":
-                                                        include("controller/editar-professor.php");
+                                                    case 'editar-professor':
+                                                        include 'controller/editar-professor.php';
                                                         break;
-                                                    case "cad-sala":
-                                                        include("controller/cadastrar-sala.php");
+                                                    case 'cad-sala':
+                                                        include 'controller/cadastrar-sala.php';
                                                         break;
-                                                    case "list-sala":
-                                                        include("controller/listar-sala.php");
+                                                    case 'list-sala':
+                                                        include 'controller/listar-sala.php';
                                                         break;
-                                                    case "salvar-sala":
-                                                        include("controller/salvar-sala.php");
+                                                    case 'salvar-sala':
+                                                        include 'controller/salvar-sala.php';
                                                         break;
-                                                    case "edit-sala":
-                                                        include("controller/editar-sala.php");
+                                                    case 'edit-sala':
+                                                        include 'controller/editar-sala.php';
                                                         break;
                                                     default:
-                                                        include("controller/home.php");
+                                                        include 'controller/home.php';
                                                 }
                                                 ?>
                                             </div>

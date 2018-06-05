@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once("conexao.php");
-$result_events = "SELECT id, title, color, start, end FROM events";
+include_once 'conexao.php';
+$result_events = 'SELECT id, title, color, start, end FROM events';
 $resultado_events = mysqli_query($conn, $result_events);
 ?>
 <!DOCTYPE html>
@@ -58,8 +58,8 @@ $resultado_events = mysqli_query($conn, $result_events);
 					},
 					events: [
 						<?php
-							while($row_events = mysqli_fetch_array($resultado_events)){
-								?>
+                            while ($row_events = mysqli_fetch_array($resultado_events)) {
+                                ?>
 								{
 								id: '<?php echo $row_events['id']; ?>',
 								title: '<?php echo $row_events['title']; ?>',
@@ -67,8 +67,8 @@ $resultado_events = mysqli_query($conn, $result_events);
 								end: '<?php echo $row_events['end']; ?>',
 								color: '<?php echo $row_events['color']; ?>',
 								},<?php
-							}
-						?>
+                            }
+                        ?>
 					]
 				});
 			});
@@ -113,11 +113,11 @@ $resultado_events = mysqli_query($conn, $result_events);
 				<h1>Agendamento de Salas - UDF</h1>
 			</div>
 			<?php
-			if(isset($_SESSION['msg'])){
-				echo $_SESSION['msg'];
-				unset($_SESSION['msg']);
-			}
-			?>
+            if (isset($_SESSION['msg'])) {
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+            }
+            ?>
 		
 			<div id='calendar'></div>
 		</div>

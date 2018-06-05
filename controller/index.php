@@ -45,38 +45,38 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<?php
-					
-						include("controller/include/config.php");
-						
-						switch(@$_REQUEST["page"]){
-							case "cad-professor":
-								include("controller/cadastrar-professor.php");
-							break;
-							case "list-professor":
-								include("controller/listar-professor.php");
-							break;
-							case "salvar-professor":
-								include("controller/salvar-professor.php");
-							break;
-							case "editar-professor":
-								include("controller/editar-professor.php");
-							break;
-							case "cad-sala":
-								include("controller/cadastrar-sala.php");
-							break;
-							case "list-sala":
-								include("controller/listar-sala.php");
-							break;
-							case "salvar-sala":
-								include("controller/salvar-sala.php");
-							break;
-							case "edit-sala":
-								include("controller/editar-sala.php");
-							break;
-							default:
-								include("home.php");
-						}
-					?>
+
+                        include 'controller/include/config.php';
+
+                        switch (@$_REQUEST['page']) {
+                            case 'cad-professor':
+                                include 'controller/cadastrar-professor.php';
+                            break;
+                            case 'list-professor':
+                                include 'controller/listar-professor.php';
+                            break;
+                            case 'salvar-professor':
+                                include 'controller/salvar-professor.php';
+                            break;
+                            case 'editar-professor':
+                                include 'controller/editar-professor.php';
+                            break;
+                            case 'cad-sala':
+                                include 'controller/cadastrar-sala.php';
+                            break;
+                            case 'list-sala':
+                                include 'controller/listar-sala.php';
+                            break;
+                            case 'salvar-sala':
+                                include 'controller/salvar-sala.php';
+                            break;
+                            case 'edit-sala':
+                                include 'controller/editar-sala.php';
+                            break;
+                            default:
+                                include 'home.php';
+                        }
+                    ?>
 				</div>
 			</div>
 		</div>

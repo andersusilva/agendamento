@@ -1,80 +1,48 @@
 <?php
 
   class conn
-
   {
+      public $user = 'root';
 
-	var $user = "root";
+      public $pass = 'root';
 
-	var $pass = "root";
+      public $host = 'localhost';
 
-	var $host = "localhost";
+      public $base = 'agendamento';
 
-	var $base = "agendamento";
+      public $consulta = '';
 
-	var $consulta = "";
+      public $link = '';
 
-	var $link = "";
-	
-	function conn()
+      public function conn()
+      {
+          $this->Conecta();
+      }
 
-  	{
+      public function Conecta()
+      {
+          $this->link = mysql_connect($this->host, $this->user, $this->pass);
 
-  		$this->Conecta();
+          if (!$this->link) {
+              die('Problema na Conexão com o base de Dados');
+          } elseif (!mysql_select_db($this->base, $this->link)) {
+              die('Problema na Conexão com o base de Dados');
+          }
+      }
 
-  	}
+      public function Desconecta()
+      {
+          return mysql_close($this->link);
+      }
 
-  	function Conecta()
+      public function Consulta($consulta)
+      {
+          $this->consulta = $consulta;
 
-  	{
-
-  		$this->link = mysql_connect($this->host,$this->user,$this->pass);
-
-  		if (!$this->link)
-
-  		{
-
-  			die("Problema na Conexão com o base de Dados");
-
-  		}
-
-  		elseif (!mysql_select_db($this->base,$this->link))
-
-  		{
-
-  			die("Problema na Conexão com o base de Dados");
-
-  		}
-
-  	}
-
-function Desconecta()
-
-  	{
-
-  		return mysql_close($this->link);
-
-  	}
-
-function Consulta($consulta)
-
-  	{
-
-          	$this->consulta = $consulta;
-
-  		if ($resultado = mysql_query($this->consulta,$this->link))
-
-  		{
-
-  			return $resultado;
-
-		} else {
-
-  			return 0;
-
-				}
-
-  	}
-
+          if ($resultado = mysql_query($this->consulta, $this->link)) {
+              return $resultado;
+          } else {
+              return 0;
+          }
+      }
   }
-  ?>

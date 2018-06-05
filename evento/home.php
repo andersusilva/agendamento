@@ -1,6 +1,6 @@
 <?php
-include_once("conexao.php");
-$result_events = "SELECT id, title, color, start, end FROM events";
+include_once 'conexao.php';
+$result_events = 'SELECT id, title, color, start, end FROM events';
 $resultado_events = mysqli_query($conn, $result_events);
 ?>
 <!DOCTYPE html>
@@ -33,8 +33,8 @@ $resultado_events = mysqli_query($conn, $result_events);
 					eventLimit: true, // allow "more" link when too many events
 					events: [
 						<?php
-							while($row_events = mysqli_fetch_array($resultado_events)){
-								?>
+                            while ($row_events = mysqli_fetch_array($resultado_events)) {
+                                ?>
 								{
 								id: '<?php echo $row_events['id']; ?>',
 								title: '<?php echo $row_events['title']; ?>',
@@ -42,8 +42,8 @@ $resultado_events = mysqli_query($conn, $result_events);
 								end: '<?php echo $row_events['end']; ?>',
 								color: '<?php echo $row_events['color']; ?>',
 								},<?php
-							}
-						?>
+                            }
+                        ?>
 					]
 				});
 			});

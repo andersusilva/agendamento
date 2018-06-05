@@ -14,10 +14,9 @@
     <!-- Bootstrap theme -->
     <link href="view/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap custom -->
-    <link href="view/css/bootstrap-custom.css" rel="stylesheet" type="text/css">
+    <link href="view/css/boobootstrap-custom.css" rel="stylesheet" type="text/css">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="view/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
     <script type="text/javascript" src="view/js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="view/js/bootstrap.min.js"></script>
     

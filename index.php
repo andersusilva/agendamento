@@ -1,8 +1,9 @@
-<!doctype html>
 <?php
 session_start();
+include_once 'cabecalho.php';
 ?>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8" />
@@ -71,7 +72,7 @@ session_start();
 		        </div>
 		        <ul class="nav">
 					<li class="active">
-		                <a href="index.php">
+		                <a href="index.php?page=cad-evento">
 		                    <i class="material-icons">date_range</i>
 		                    <p>Agendamento</p>
 		                </a>
@@ -116,6 +117,26 @@ session_start();
 		                    </ul>
 		                </div>
 		            </li>
+                    <li>
+                        <a data-toggle="collapse" href="#disciplina">
+                            <i class="material-icons">widgets</i>
+                            <p>Disciplina
+                                <b class="caret"></b>
+                            </p>
+                        </a>
+
+                        <div class="collapse" id="disciplina">
+                            <ul class="nav">
+                                <li>
+                                    <a href="index.php?page=cad-disciplina">Cadastrar</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?page=list-disciplina">Listar</a>
+                                </li>
+                                <br><br>
+                            </ul>
+                        </div>
+                    </li>
 		        </ul>
 		    </div>
 		</div>
@@ -216,11 +237,25 @@ session_start();
                                                     case 'salvar-sala':
                                                         include 'controller/salvar-sala.php';
                                                         break;
-                                                    case 'edit-sala':
-                                                        include 'controller/editar-sala.php';
+                                                    case 'edit-disciplina':
+                                                        include 'controller/editar-disciplina.php';
+                                                    case 'cad-disciplina':
+                                                        include 'controller/cadastrar-disciplina.php';
+                                                        break;
+                                                    case 'list-disciplina':
+                                                        include 'controller/listar-disciplina.php';
+                                                        break;
+                                                    case 'salvar-disciplina':
+                                                        include 'controller/salvar-disciplina.php';
+                                                        break;
+                                                    case 'edit-disciplina':
+                                                        include 'controller/editar-disciplina.php';
+                                                        break;
+                                                    case 'cad-evento':
+                                                        include 'evento/index.php';
                                                         break;
                                                     default:
-                                                        include 'controller/home.php';
+                                                        include 'evento/index.php';
                                                 }
                                                 ?>
                                             </div>
@@ -235,7 +270,7 @@ session_start();
 			<footer class="footer">
 			    <div class="container-fluid">
 			        <p class="copyright pull-right">
-			            &copy; <script>document.write(new Date().getFullYear())</script>
+			            Agendamento de Salas - UDF &copy; <script>document.write(new Date().getFullYear())</script>
                         Desenvolvido por Álef, Anderson, Anselmo, Arnaldo, Cleivan e Neilton.
 			        </p>
 			    </div>

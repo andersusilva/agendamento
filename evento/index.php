@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 include_once 'conexao.php';
 $result_events = 'SELECT id, title, color, start, end FROM events';
 $resultado_events = mysqli_query($conn, $result_events);
@@ -110,7 +110,7 @@ $resultado_events = mysqli_query($conn, $result_events);
 	<body>
 		<div class="container">
 			<div class="page-header">
-				<h1>Agendamento de Salas - UDF</h1>
+				<h3>Agende sua aula ou evento selecionando uma data</h3>
 			</div>
 			<?php
             if (isset($_SESSION['msg'])) {

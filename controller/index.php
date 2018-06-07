@@ -43,7 +43,7 @@
 		
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-xs-12 .col-sm-6 .col-lg-8">
 					<?php
 
                         include 'controller/include/config.php';

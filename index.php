@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'cabecalho.php';
+//include_once 'cabecalho.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -210,7 +210,7 @@ include_once 'cabecalho.php';
 									<h4 class="card-title">Agendamento de Salas - UDF</h4>
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-lg-12">
+                                            <div class="col-lg-10">
                                                 <?php
 
                                                 include 'controller/include/config.php';
@@ -237,8 +237,9 @@ include_once 'cabecalho.php';
                                                     case 'salvar-sala':
                                                         include 'controller/salvar-sala.php';
                                                         break;
-                                                    case 'edit-disciplina':
+                                                    case 'editar-sala':
                                                         include 'controller/editar-disciplina.php';
+                                                        break;
                                                     case 'cad-disciplina':
                                                         include 'controller/cadastrar-disciplina.php';
                                                         break;
@@ -248,11 +249,11 @@ include_once 'cabecalho.php';
                                                     case 'salvar-disciplina':
                                                         include 'controller/salvar-disciplina.php';
                                                         break;
-                                                    case 'edit-disciplina':
+                                                    case 'editar-disciplina':
                                                         include 'controller/editar-disciplina.php';
                                                         break;
                                                     case 'cad-evento':
-                                                        include 'evento/index.php';
+                                                        include 'evento.php';
                                                         break;
                                                     default:
                                                         include 'evento/index.php';

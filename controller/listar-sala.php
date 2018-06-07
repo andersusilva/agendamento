@@ -34,9 +34,9 @@
             echo '<td>'.$row['pcd'].'</td>';
             echo "<td>
 				
-					<button class='btn btn-success' onclick=\"location.href='index.php?page=edit-print&id_print=".$row['id_print']."';\"><i class='fa fa-edit'></i></button>
+					<button class='btn btn-success' onclick=\"location.href='index.php?page=editar-sala&id_sala=".$row['id_sala']."';\"><i class='fa fa-edit'></i></button>
 					
-					<button class='btn btn-danger' onclick=\"location.href='index.php?page=salvar-print&acao=excluir&id_print=".$row['id_print']."';\"><i class='fa fa-trash'></i></button>
+					<button class='btn btn-danger' onclick=\"location.href='index.php?page=salvar-sala&acao=excluir&id_sala=".$row['id_sala']."';\"><i class='fa fa-trash'></i></button>
 					
 				   </td>";
             echo '</tr>';

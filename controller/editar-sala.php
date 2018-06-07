@@ -32,7 +32,7 @@
 	</div>
 	<div class="form-group">
 		<label>Nome da Sala:</label>
-		<input type="text" name="nome_sala" class="form-control" value="<?php echo $row['nome_print']; ?>" required>
+		<input type="text" name="nome_sala" class="form-control" value="<?php echo $row['nome_sala']; ?>" required>
 	</div>
 		<div class="form-group">
 		<label>Capacidade:</label>
@@ -40,7 +40,7 @@
 	</div>
 	<div class="form-group">
 		<label>Nome da Disciplina:</label>
-		<input type="date" name="nome_disciplina" class="form-control" value="<?php echo $row['nome_disciplina']; ?>" required>
+		<input type="text" name="nome_disciplina" class="form-control" value="<?php echo $row['nome_disciplina']; ?>" required>
 	</div>
     <div class="form-group">
         <label>Turno:</label>

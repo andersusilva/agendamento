@@ -1,11 +1,10 @@
 <br>
 <?php
-    $erro = @$_REQUEST['erro_id_erro'];
-    $nome = @$_REQUEST['nome_print'];
-    $valor = @$_REQUEST['valor_print'];
-    $ano = @$_REQUEST['ano_print'];
-    $modelo = @$_REQUEST['modelo_print'];
-    $arquivo = @$_REQUEST['arquivo'];
+    $id_disciplina = @$_REQUEST['id_disciplina'];
+    $sala_id_sala = @$_REQUEST['sala_id_sala'];
+    $professor_id_professor = @$_REQUEST['professor_id_professor'];
+    $nome_disciplina = @$_REQUEST['nome_disciplina'];
+    $turno_disciplina = @$_REQUEST['turno_disciplina'];
 
     switch ($_REQUEST['acao']) {
         case 'cadastrar':

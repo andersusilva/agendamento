@@ -20,7 +20,7 @@
             }
         ?>
 	</div>
-	
+
 	<div class="form-group">
 		<label>Nome da Sala:</label>
 		<input type="text" name="nome_sala" class="form-control" required>
@@ -45,11 +45,10 @@
 		<OPTION>NOTURNO
 		</SELECT>
 	</div>
-	
 	<div class="form-group">
 		<label>Adaptada para Deficientes:</label>
-		<INPUT TYPE="radio" NAME="pcd" class="form-control" VALUE="true" required> SIM
-        <INPUT TYPE="radio" NAME="pcd" class="form-control" VALUE="false" required> NAO
+		<INPUT TYPE="radio" NAME="pcd" class="form" VALUE="true" required> SIM
+        <INPUT TYPE="radio" NAME="pcd" class="form" VALUE="false" required> NAO
 	</div>
 	
 	<div class="form-group">

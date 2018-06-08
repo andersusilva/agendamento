@@ -12,25 +12,19 @@
 
     if ($qtd > 0) {
         echo "<p>Encontrou <b>$qtd</b> resultado(s)</p>";
-        echo "<table class='table table-bordered table-striped table-hover'>";
+        echo "<table class='table table-bordered table-hover'>";
         echo '<tr>';
         echo '<th>#</th>';
-        echo '<th>Nome da Sala:</th>';
-        echo '<th>Nome do Professor</th>';
-        echo '<th>Capacidade:</th>';
-        echo '<th>Nome da Disciplina:</th>';
-        echo '<th>Turno:</th>';
-        echo '<th>Adaptada para Deficientes:</th>';
+        echo '<th>Nome da Sala</th>';
+        echo '<th>Capacidade</th>';
+        echo '<th>Adaptada para Deficientes</th>';
         echo '<th>Ações</th>';
         echo '</tr>';
         while ($row = $result->fetch_assoc()) {
             echo '<tr>';
             echo '<td>'.$row['id_sala'].'</td>';
             echo '<td>'.$row['nome_sala'].'</td>';
-            echo '<td>'.$row['nome_professor'].'</td>';
             echo '<td>'.$row['capacidade'].'</td>';
-            echo '<td>'.$row['nome_disciplina'].'</td>';
-            echo '<td>'.$row['turno_disciplina'].'</td>';
             echo '<td>'.$row['pcd'].'</td>';
             echo "<td>
 				

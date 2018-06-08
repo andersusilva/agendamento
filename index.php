@@ -61,7 +61,7 @@ session_start();
 		                    Administrador
 		                    <b class="caret"></b>
 		                </a>
-		                <div class="collapse" id="dados">
+		               <div class="collapse" id="dados">
 		                    <ul class="nav">
 		                        <li><a href="#">Meu Perfil</a></li>
 		                        <li><a href="#">Editar Perfil</a></li>
@@ -238,7 +238,7 @@ session_start();
                                                         include 'controller/salvar-sala.php';
                                                         break;
                                                     case 'editar-sala':
-                                                        include 'controller/editar-disciplina.php';
+                                                        include 'controller/editar-sala.php';
                                                         break;
                                                     case 'cad-disciplina':
                                                         include 'controller/cadastrar-disciplina.php';

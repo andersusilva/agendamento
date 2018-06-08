@@ -36,7 +36,7 @@
 	</div>
 		<div class="form-group">
 		<label>Capacidade:</label>
-		<input type="number" name="capacidade" class="form-control" min="1" max="50" value="<?php echo $row['capaciade']; ?>" required>
+		<input type="number" name="capacidade" class="form-control" min="1" max="50" value="<?php echo $row['capacidade']; ?>" required>
 	</div>
 	<div class="form-group">
 		<label>Nome da Disciplina:</label>
@@ -52,11 +52,11 @@
     </div>
     <div class="form-group">
         <label>Adaptada para Deficientes:</label>
-        <INPUT TYPE="radio" NAME="pcd" VALUE="true" value="<?php echo $row['turno_disciplina']; ?>" required> SIM
-        <INPUT TYPE="radio" NAME="pcd" VALUE="false" value="<?php echo $row['turno_disciplina']; ?>" required> NAO
+        <INPUT TYPE="radio" NAME="pcd" VALUE="true" value="<?php echo $row['pcd']; ?>" required> SIM
+        <INPUT TYPE="radio" NAME="pcd" VALUE="false" value="<?php echo $row['´pcd']; ?>" required> NAO
     </div>
 	<div class="form-group">
-		<button type="submit" class="btn btn-primary">Enviar</button>
+		<button type="submit" class="btn btn-success">Enviar</button>
 	</div>
 </form>
 <?php

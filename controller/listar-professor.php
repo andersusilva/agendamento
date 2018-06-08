@@ -8,12 +8,11 @@
 
     if ($qtd > 0) {
         echo "<p>Encontrou <b>$qtd</b> resultado(s)</p>";
-        echo "<table class='table table-bordered table-striped table-hover'>";
+        echo "<table class='table table-bordered table-hover'>";
         echo '<tr>';
         echo '<th>#</th>';
         echo '<th>Nome do professor</th>';
         echo '<th>Sobrenome do professor</th>';
-        echo '<th>Status</th>';
         echo '<th>Ações</th>';
         echo '</tr>';
         while ($row = $result->fetch_assoc()) {
@@ -21,7 +20,6 @@
             echo '<td>'.$row['id_professor'].'</td>';
             echo '<td>'.$row['nome_professor'].'</td>';
             echo '<td>'.$row['sobrenome_professor'].'</td>';
-            echo '<td>'.$row['status_atual'].'</td>';
             echo "<td>
 					<button class='btn btn-success' onclick=\"location.href='index.php?page=editar-professor&id_professor=".$row['id_professor']."'\"><i class='fa fa-edit'></i></button>
 					

@@ -1,51 +1,49 @@
-<br>
 <?php
-    $erro = @$_REQUEST['erro_id_erro'];
-    $nome = @$_REQUEST['nome_print'];
-    $valor = @$_REQUEST['valor_print'];
-    $ano = @$_REQUEST['ano_print'];
-    $modelo = @$_REQUEST['modelo_print'];
-    $arquivo = @$_REQUEST['arquivo'];
+    $id_sala = @$_REQUEST['id_sala'];
+    $nome_sala = @$_REQUEST['nome_sala'];
+    $capacidade = @$_REQUEST['capacidade'];
+    $pcd = @$_REQUEST['pcd'];
+    $tipo = @$_REQUEST['tipo'];
 
     switch ($_REQUEST['acao']) {
         case 'cadastrar':
-            $sql = "INSERT INTO print (erro_id_erro, nome_print, valor_print, ano_print, modelo_print, arquivo) VALUES ({$erro},'{$nome}', '{$valor}', '{$ano}', '{$modelo}', '{$arquivo}')";
+            $sql = "INSERT INTO sala (id_sala, nome_sala, capacidade, pcd, tipo) 
+                    VALUES ({$id_sala},'{$nome_sala}', '{$capacidade}', '{$pcd}', '{$tipo}')";
 
             $result = $conn->query($sql);
 
             if ($result == true) {
-                echo "<div class='alert alert-success'>Cadastrou com sucesso!</div>";
+                echo "<div class='alert alert-success'>Cadastrado com sucesso!</div>";
             } else {
                 echo "<div class='alert alert-danger'>Não foi possível cadastrar</div>";
             }
         break;
         case 'editar':
-            $sql = "UPDATE print SET
-						erro_id_erro={$erro},
-						nome_print='{$nome}',
-						valor_print='{$valor}',
-						ano_print='{$ano}',
-						modelo_print='{$modelo}',
-						arquivo='{$arquivo}'
+            $sql = "UPDATE sala SET
+						id_sala={$id_sala},
+						nome_sala='{$nome_sala}',
+						capacidade='{$capacidade}',
+						pcd='{$pcd}',
+						tipo='{$tipo}'
 						
 					WHERE
-						id_print=".$_REQUEST['id_print'];
+						id_sala=".$_REQUEST['id_sala'];
 
             $result = $conn->query($sql);
 
             if ($result == true) {
-                echo "<div class='alert alert-success'>Editou com sucesso!</div>";
+                echo "<div class='alert alert-success'>Editada com sucesso!</div>";
             } else {
                 echo "<div class='alert alert-danger'>Não foi possível editar</div>";
             }
         break;
         case 'excluir':
-            $sql = 'DELETE FROM print WHERE id_print='.$_REQUEST['id_print'];
+            $sql = 'DELETE FROM sala WHERE id_sala='.$_REQUEST['id_print'];
 
             $result = $conn->query($sql);
 
             if ($result == true) {
-                echo "<div class='alert alert-success'>Excluiu com sucesso!</div>";
+                echo "<div class='alert alert-success'>Excluido com sucesso!</div>";
             } else {
                 echo "<div class='alert alert-danger'>Não foi possível excluir</div>";
             }
@@ -53,8 +51,3 @@
     }
 
 ?>
-
-
-
-
-

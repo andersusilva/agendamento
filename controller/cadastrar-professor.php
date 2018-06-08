@@ -1,4 +1,4 @@
-<h1>Cadastrar Novo Professor</h1>
+<h1>Cadastrar Professor</h1>
 <form action="index.php?page=salvar-professor&acao=cadastrar" method="POST">
 	<div class="form-group">
 		<label>Nome do Professor: </label>
@@ -9,6 +9,6 @@
 		<input type="text" name="sobrenome_professor" class="form-control" required>
 	</div>
 	<div class="form-group">
-		<button type="submit" class="btn btn-dark">Salvar</button>
+		<button type="submit" class="btn btn-success">Salvar</button>
 	</div>
 </form>

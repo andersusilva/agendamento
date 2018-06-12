@@ -6,6 +6,6 @@
 
     $conn = new mysqli($host, $user, $pass, $base);
 
-    if ($conn->connect_error) {
-        die('Erro: '.$conn->connect_error);
-    }
+if ($conn->connect_error) {
+    die('Erro: '.$conn->connect_error);
+}

@@ -1,8 +1,6 @@
 <h1>Editar Disciplinas</h1>
 <?php
-    $sql = 'SELECT * FROM disciplina AS s
-			INNER JOIN sala AS d
-			ON d.id_sala = s.sala_id_sala
+    $sql = 'SELECT * FROM disciplina
 			WHERE id_disciplina='.$_REQUEST['id_disciplina'];
 
     $result = $conn->query($sql);

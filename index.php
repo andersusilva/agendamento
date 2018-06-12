@@ -72,9 +72,9 @@ session_start();
 		        </div>
 		        <ul class="nav">
 					<li class="active">
-		                <a href="index.php?page=cad-evento">
+		                <a href="evento/index.php" target="_blank">
 		                    <i class="material-icons">date_range</i>
-		                    <p>Agendamento</p>
+		                    <p>Agendar</p>
 		                </a>
 		            </li>
 		            <li>
@@ -212,9 +212,7 @@ session_start();
                                         <div class="row">
                                             <div class="col-lg-10">
                                                 <?php
-
                                                 include 'controller/include/config.php';
-
                                                 switch (@$_REQUEST['page']) {
                                                     case 'cad-professor':
                                                         include 'controller/cadastrar-professor.php';
@@ -256,7 +254,7 @@ session_start();
                                                         include 'evento.php';
                                                         break;
                                                     default:
-                                                        include 'evento/index.php';
+                                                        include 'controller/home.php';
                                                 }
                                                 ?>
                                             </div>

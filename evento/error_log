@@ -1,0 +1,7 @@
+[08-Jun-2018 02:48:18 America/Sao_Paulo] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/evento/conexao.php on line 8
+[08-Jun-2018 02:48:18 America/Sao_Paulo] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/developf/public_html/salas/evento/index.php on line 5
+[08-Jun-2018 02:48:18 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/developf/public_html/salas/evento/index.php on line 61
+[08-Jun-2018 02:48:24 America/Sao_Paulo] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/evento/conexao.php on line 8
+[08-Jun-2018 02:48:24 America/Sao_Paulo] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/developf/public_html/salas/evento/conexao.php on line 8
+[08-Jun-2018 02:48:24 America/Sao_Paulo] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/developf/public_html/salas/evento/index.php on line 5
+[08-Jun-2018 02:48:24 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/developf/public_html/salas/evento/index.php on line 61

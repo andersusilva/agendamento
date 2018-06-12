@@ -1,8 +1,9 @@
 <h1>Listar Disciplinas</h1>
 <?php
     $sql = 'SELECT * FROM disciplina AS s
-            INNER JOIN sala AS d
-            ON s.id_disciplina = d. id_sala';
+            LEFT JOIN sala AS d
+            ON s.id_disciplina = d. id_sala
+            ORDER BY nome_disciplina';
 
     $result = $conn->query($sql);
 

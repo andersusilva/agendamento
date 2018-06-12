@@ -1,6 +1,7 @@
-<h1>Listar professores</h1>
+<h1>Listar Professores</h1>
 <?php
-    $sql = 'SELECT * FROM professor';
+    $sql = 'SELECT * FROM professor
+            ORDER BY nome_professor';
 
     $result = $conn->query($sql);
 

@@ -1,6 +1,6 @@
 <?php
 //session_start();
-include_once 'conexao.php';
+include_once '../controller/include/config.php';
 $result_events = 'SELECT id, title, color, start, end FROM events';
 $resultado_events = mysqli_query($conn, $result_events);
 ?>
@@ -110,7 +110,7 @@ $resultado_events = mysqli_query($conn, $result_events);
 	<body>
 		<div class="container">
 			<div class="page-header">
-				<h3>Agende sua aula ou evento selecionando uma data</h3>
+				<h3 style='text-align:center;'>Agende sua aula ou evento selecionando uma data</h3>
 			</div>
 			<?php
             if (isset($_SESSION['msg'])) {
@@ -127,18 +127,18 @@ $resultado_events = mysqli_query($conn, $result_events);
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title text-center">Dados do Evento</h4>
+						<h4 class="modal-title text-center">Dados do Agendamento</h4>
 					</div>
 					<div class="modal-body">
 						<div class="visualizar">
 							<dl class="dl-horizontal">
-								<dt>ID do Evento</dt>
+								<dt>ID do Agendamento</dt>
 								<dd id="id"></dd>
-								<dt>Titulo do Evento</dt>
+								<dt>Titulo</dt>
 								<dd id="title"></dd>
-								<dt>Inicio do Evento</dt>
+								<dt>Inicio</dt>
 								<dd id="start"></dd>
-								<dt>Fim do Evento</dt>
+								<dt>Fim</dt>
 								<dd id="end"></dd>
 							</dl>
 							<button class="btn btn-canc-vis btn-warning">Editar</button>
@@ -150,7 +150,7 @@ $resultado_events = mysqli_query($conn, $result_events);
 								<div class="form-group">
 									<label for="inputEmail3" class="col-sm-2 control-label">Titulo</label>
 									<div class="col-sm-10">
-										<input type="text" class="form-control" name="title" id="title" placeholder="Titulo do Evento">
+										<input type="text" class="form-control" name="title" id="title" placeholder="Titulo do Agendamento" required>
 									</div>
 								</div>
 								<div class="form-group">
@@ -204,21 +204,21 @@ $resultado_events = mysqli_query($conn, $result_events);
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title text-center">Cadastrar Evento</h4>
+						<h4 class="modal-title text-center">Cadastrar Agendamento</h4>
 					</div>
 					<div class="modal-body">
 						<form class="form-horizontal" method="POST" action="proc_cad_evento.php">
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Titulo</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" name="title" placeholder="Titulo do Evento">
+									<input type="text" class="form-control" name="title" placeholder="Titulo do Agendamento" required>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Cor</label>
 								<div class="col-sm-10">
 									<select name="color" class="form-control" id="color">
-										<option value="">Selecione</option>			
+										<option value="lime">Selecione</option>			
 										<option style="color:#FFD700;" value="#FFD700">Amarelo</option>
 										<option style="color:#0071c5;" value="#0071c5">Azul Turquesa</option>
 										<option style="color:#FF4500;" value="#FF4500">Laranja</option>
@@ -269,7 +269,7 @@ $resultado_events = mysqli_query($conn, $result_events);
                 $('.btn-data-confirm').click(function(ev){
                     var href = $(this).attr('href');
                     if(!$('#confirm-delete').length){
-                        $('body').append('<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header bg-danger text-white">EXCLUIR ITEM<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body">Tem certeza de que deseja excluir o item selecionado?</div><div class="modal-footer"><button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button><a class="btn btn-danger text-white" id="dataComfirmOK">Apagar</a></div></div></div></div>');
+                        $('body').append('<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header bg-danger text-white">EXCLUIR ITEM<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body">Tem certeza de que deseja excluir o item selecionado?</div><div class="modal-footer"><button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button><a class="btn btn-danger text-white" id="dataComfirmOK" href="proc_apagar_evento.php?id='+$("#id").val()+'">Apagar</a></div></div></div></div>');
                     }
                     $('#dataComfirmOK').attr('href', href);
                     $('#confirm-delete').modal({show: true});

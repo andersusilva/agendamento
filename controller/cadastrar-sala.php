@@ -1,27 +1,6 @@
 <h1>Cadastrar Sala</h1>
 <form action="index.php?page=salvar-sala&acao=cadastrar" method="POST">
 	<div class="form-group">
-		<label>Selecione o Nome do Professor:</label>
-		<?php
-            $sql = 'SELECT * FROM professor';
-
-            $result = $conn->query($sql);
-
-            $qtd = $result->num_rows;
-
-            if ($qtd > 0) {
-                echo "<select name='nome_professor' class='form-control'>";
-                while ($row = $result->fetch_assoc()) {
-                    echo "<option value='".$row['id_professor']."'>".$row['nome_professor'].'</option>';
-                }
-                echo '</select>';
-            } else {
-                echo 'Não encontrou resultados';
-            }
-        ?>
-	</div>
-
-	<div class="form-group">
 		<label>Nome da Sala:</label>
 		<input type="text" name="nome_sala" class="form-control" required>
 	</div>
@@ -33,25 +12,21 @@
 	</div>
 	
 	<div class="form-group">
-		<label>Nome da Disciplina:</label>
-	    <input type="text" name="nome_disciplina" class="form-control" required>
+		<label>Adaptada para Deficientes:</label>
+		<INPUT TYPE="radio" NAME="pcd" class="form" VALUE="SIM" required> SIM
+        <INPUT TYPE="radio" NAME="pcd" class="form" VALUE="NAO" required> NAO
 	</div>
 	
 	<div class="form-group">
-		<label>Turno:</label>
-		<SELECT name="turno_disciplina" class="form-control" required>
-		<OPTION>MATUTINO
-		<OPTION>VESPERTINO
-		<OPTION>NOTURNO
+		<label>Tipo:</label>
+		<SELECT name="tipo" class="form-control" required>
+		<OPTION>Laboratório
+		<OPTION>Estudo
+		<OPTION>Evento
 		</SELECT>
 	</div>
-	<div class="form-group">
-		<label>Adaptada para Deficientes:</label>
-		<INPUT TYPE="radio" NAME="pcd" class="form" VALUE="true" required> SIM
-        <INPUT TYPE="radio" NAME="pcd" class="form" VALUE="false" required> NAO
-	</div>
 	
 	<div class="form-group">
-		<button type="submit" class="btn btn-primary">Enviar</button>
+		<button type="submit" class="btn btn-success">Enviar</button>
 	</div>
 </form>

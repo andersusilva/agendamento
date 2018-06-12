@@ -1,4 +1,5 @@
 RewriteEngine On
+php_flag display_errors off
 
 # Redirecionar para HTTPS WC
 RewriteCond %{HTTP:X-Forwarded-Proto} !https

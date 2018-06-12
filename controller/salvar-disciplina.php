@@ -1,6 +1,7 @@
 <br>
 <?php
     $id_disciplina = @$_REQUEST['id_disciplina'];
+    $nome_disciplina = @$_REQUEST['nome_disciplina'];
     $sala_id_sala = @$_REQUEST['sala_id_sala'];
     $professor_id_professor = @$_REQUEST['professor_id_professor'];
     $nome_disciplina = @$_REQUEST['nome_disciplina'];
@@ -8,7 +9,8 @@
 
     switch ($_REQUEST['acao']) {
         case 'cadastrar':
-            $sql = "INSERT INTO discplina (id_disciplina, nome_disciplina, turno_disciplina) VALUES ({$id_disciplina},'{$nome_disciplina}', '{$turno_disciplina}')";
+            $sql = "INSERT INTO disciplina (nome_disciplina, turno_disciplina) 
+            VALUES ('{$nome_disciplina}', '{$turno_disciplina}')";
 
             $result = $conn->query($sql);
 
@@ -20,7 +22,6 @@
         break;
         case 'editar':
             $sql = "UPDATE disciplina SET
-						id_disciplina={$id_disciplina},
 						nome_disciplina='{$nome_disciplina}',
 						turno_disciplina='{$turno_disciplina}'
 						

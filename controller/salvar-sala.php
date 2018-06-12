@@ -7,8 +7,8 @@
 
     switch ($_REQUEST['acao']) {
         case 'cadastrar':
-            $sql = "INSERT INTO sala (id_sala, nome_sala, capacidade, pcd, tipo) 
-                    VALUES ({$id_sala},'{$nome_sala}', '{$capacidade}', '{$pcd}', '{$tipo}')";
+            $sql = "INSERT INTO sala (nome_sala, capacidade, pcd, tipo) 
+                    VALUES ('{$nome_sala}', '{$capacidade}', '{$pcd}', '{$tipo}')";
 
             $result = $conn->query($sql);
 
@@ -38,7 +38,7 @@
             }
         break;
         case 'excluir':
-            $sql = 'DELETE FROM sala WHERE id_sala='.$_REQUEST['id_print'];
+            $sql = 'DELETE FROM sala WHERE id_sala='.$_REQUEST['id_sala'];
 
             $result = $conn->query($sql);
 

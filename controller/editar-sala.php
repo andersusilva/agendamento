@@ -1,9 +1,9 @@
 <h1>Editar Sala</h1>
 <?php
-    $sql = 'SELECT * FROM sala AS s
-			INNER JOIN disciplina AS d
-			ON s.id_sala = d.sala_id_sala
-			WHERE id_sala='.$_REQUEST['id_sala'];
+    $sql = 'SELECT * FROM sala
+            INNER JOIN disciplina
+            INNER JOIN professor
+            WHERE id_sala='.$_REQUEST['id_sala'];
 
     $result = $conn->query($sql);
 
@@ -52,8 +52,8 @@
     </div>
     <div class="form-group">
         <label>Adaptada para Deficientes:</label>
-        <INPUT TYPE="radio" NAME="pcd" VALUE="true" value="<?php echo $row['pcd']; ?>" required> SIM
-        <INPUT TYPE="radio" NAME="pcd" VALUE="false" value="<?php echo $row['´pcd']; ?>" required> NAO
+        <INPUT TYPE="radio" NAME="pcd" VALUE="SIM" value="<?php echo $row['pcd']; ?>" required> SIM
+        <INPUT TYPE="radio" NAME="pcd" VALUE="NAO" value="<?php echo $row['pcd']; ?>" required> NAO
     </div>
 	<div class="form-group">
 		<button type="submit" class="btn btn-success">Enviar</button>

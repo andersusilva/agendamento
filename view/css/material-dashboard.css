@@ -6514,7 +6514,7 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
 }
 
 .page-header {
-  height: 60vh;
+  height: 5vh;
   background-position: center center;
   background-size: cover;
   margin: 0;

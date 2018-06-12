@@ -1,52 +1,41 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head><meta charset="utf-8"></head>
-<body>
-<h2>Bem Vindo (a)!</h2> 
-<h3>Este é o Sistema da UDF que realiza agendamentos de salas.</h3>
-<?php
-    $sql = 'SELECT * FROM disciplina AS d
-            INNER JOIN professor AS p
-            ON p.id_professor = d.professor_id_professor
-            INNER JOIN sala AS s
-            ON s.id_sala = d.sala_id_sala';
-
-    $result = $conn->query($sql);
-
-    $qtd = $result->num_rows;
-
-    if ($qtd > 0) {
-        echo "<p>Foram encontrados <b>$qtd</b> sala (s) agendada (s)</p>";
-        echo "<table class='table table-bordered table-striped table-hover table-info' class='img-thumbnail'>";
-        echo '<tr>';
-        echo '<th>#</th>';
-        echo '<th>Sala</th>';
-        echo '<th>Nome do Professor</th>';
-        echo '<th>Sobrenome do Professor</th>';
-        echo '<th>Disciplina</th>';
-        echo '<th>Turno</th>';
-        echo '</tr>';
-        while ($row = $result->fetch_assoc()) {
-            echo '<tr>';
-            echo '<td>'.$row['id_disciplina'].'</td>';
-            echo '<td>'.$row['nome_sala'].'</td>';
-            echo '<td>'.$row['nome_professor'].'</td>';
-            echo '<td>'.$row['sobrenome_professor'].'</td>';
-            echo '<td>'.$row['nome_disciplina'].'</td>';
-            echo '<td>'.$row['turno_disciplina'].'</td>';
-            echo '</tr>';
-        }
-        echo '</table>';
-    } else {
-        echo 'Não encontrou resultados';
-    }
-?>
-<!--
-<img src="uploads/noimg.jpg" width="215" alt="Imagem 1" class="img-thumbnail">
-<img src="uploads/noimg.jpg" width="215" alt="Imagem 2" class="img-thumbnail">
-<img src="uploads/noimg.jpg" width="215" alt="Imagem 3" class="img-thumbnail">
-<img src="uploads/noimg.jpg" width="215" alt="imagem 4" class="img-thumbnail">
-<img src="uploads/noimg.jpg" width="215" alt="imagem 5" class="img-thumbnail">
--->
-</body>
-</html>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+    <blockquote>Bem vindo (a) ao <strong>SISTEMA DE AGENDAMENTO DE SALAS - UDF</strong>, utilize o menu lateral para navegar entre as opções<br></blockquote>
+<strong>O QUE É</strong>
+<ul>
+ 	<li>Este projeto tem por objetivo unificar e tornar de forma simples o agendamento de salas utilizadas pelo corpo de funcionários acadêmicos.</li>
+</ul>
+<strong>PORQUÊ</strong>
+<ul>
+ 	<li>Há uma confusão em relação a salas e agendamentos duplicados para mesmo período.</li>
+ 	<li>Não se tem ciência de quem está com qual sala agendada.</li>
+</ul>
+<strong>ONDE SERÁ FEITO?</strong>
+<ul>
+ 	<li>Turma: N2 - Noturno</li>
+ 	<li>Local: Campus SEDE</li>
+ 	<li>Instituição: Centro Universitário do Distrito Federal - UDF</li>
+</ul>
+<strong>QUANDO SERÁ FEITO?</strong>
+<ul>
+ 	<li>Maio/2018 à Junho/2018</li>
+</ul>
+<strong>POR QUEM SERÁ FEITO?</strong>
+<ul>
+ 	<li>Alunos:
+Álef, Anderson, Anselmo, Arnaldo, Cleivan e Neilton</li>
+ 	<li>Curso:
+Análise e Desenvolvimento de Sistemas</li>
+</ul>
+<strong>COMO SERÁ FEITO?</strong>
+<ul>
+ 	<li>Back-end: PHP</li>
+ 	<li>Front-end: Html5, CSS, Bootstrap</li>
+</ul>
+Todos os direitos reservados à Alunos de ADS da UDF - Distribuido através da licença MIT © 2018
+Desenvolvido por Álef, Anderson, Anselmo, Arnaldo, Cleivan e Neilton.
+<br><br>Código Fonte: <a href="https://andersusilva.github.io/agendamento/">https://andersusilva.github.io/agendamento/</a>
+        </div>
+    </div>
+</div>

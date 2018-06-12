@@ -1,10 +1,7 @@
 <h1>Listar Salas</h1>
 <?php
-    $sql = 'SELECT * FROM sala AS s
-            INNER JOIN disciplina AS d
-            ON s.id_sala = d.sala_id_sala
-            INNER JOIN professor AS p
-            ON p.id_professor = d.professor_id_professor';
+    $sql = 'SELECT * FROM sala
+            ORDER BY nome_sala';
 
     $result = $conn->query($sql);
 

@@ -19,18 +19,13 @@
 
 * Maio/2018 à Junho/2018
 
-## POR QUEM SERÁ FEITO? ##
-
-* Alunos:  
-* Álef, Anderson, Anselmo, Arnaldo, Cleivan e Neilton
-* Curso:
-* Análise e Desenvolvimento de Sistemas
-
 ## COMO SERÁ FEITO? ##
 
 * Back-end: PHP
 * Front-end: Html5, CSS, Bootstrap
 
 * Desenvolvido por Álef, Anderson, Cleivan e Neilton.
+* Curso:
+* Análise e Desenvolvimento de Sistemas
 * Link: https://andersusilva.github.io/agendamento/
 * Todos os direitos reservados à Alunos de ADS da UDF - Distribuido através da licença MIT © 2018
